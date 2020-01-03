@@ -6,4 +6,4 @@ Light controller webpage for my living room
 
 
 ## Current view
-- ![Image](![alt text](https://raw.githubusercontent.com/michmay/light-controller/master/current-state.png))
+- ![Image](https://raw.githubusercontent.com/michmay/light-controller/master/current-state.png)
