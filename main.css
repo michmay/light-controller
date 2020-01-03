@@ -5,7 +5,8 @@ body {
 
 
 .row {
-    align-items: center
+    align-items: center;
+    margin-top: 10px;
 
 }
 button {
@@ -105,6 +106,7 @@ color: white;
   background-color: white;
   
   -webkit-transition-duration: 1;
+  transition-duration: 1;
   -webkit-transition: cubic-bezier(0.68, -0.55, 0.265, 4);
   /*-webkit-transition: .4s;*/
   transition: .4s;
@@ -141,4 +143,13 @@ input:checked + .slider-room:before {
 
 .slider-room.round:before {
   border-radius: 50%;
+}
+
+#room-name {
+  font-family: 'Ibarra Real Nova', serif;
+  font-size: 30px;
+  color: rgb(226, 226, 226);
+  text-shadow: #3f3f3f;
+  
+  justify-content: center;
 }

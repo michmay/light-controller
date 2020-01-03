@@ -1,14 +1,19 @@
 var url = "http://192.168.0.2/api/ZBmlmu00Kpy23xBCjtLQCCinBYJaqjeULVNEWAmB/lights/1/state"
+const roomName = document.getElementById("room-name")
+
 
 const switchURL = () => {
     var switcher = document.getElementById("room-switch").checked
 
     if(switcher){
-        console.log("checkbox is true")
-        url = "http://192.168.0.2/api/ZBmlmu00Kpy23xBCjtLQCCinBYJaqjeULVNEWAmB/lights/2/state"
+        console.log("checkbox is true");
+        url = "http://192.168.0.2/api/ZBmlmu00Kpy23xBCjtLQCCinBYJaqjeULVNEWAmB/lights/2/state";
+        roomName.textContent = "BEDROOM";
+
     }
     else {
         url = "http://192.168.0.2/api/ZBmlmu00Kpy23xBCjtLQCCinBYJaqjeULVNEWAmB/lights/1/state"
+        roomName.textContent = "LIVING";
     }
 }
 
