@@ -1,13 +1,14 @@
-const url = "http://192.168.0.2/api/ZBmlmu00Kpy23xBCjtLQCCinBYJaqjeULVNEWAmB/lights/1/state"
+var url = "http://192.168.0.2/api/ZBmlmu00Kpy23xBCjtLQCCinBYJaqjeULVNEWAmB/lights/1/state"
 
 const switchURL = () => {
     var switcher = document.getElementById("room-switch").checked
 
     if(switcher){
         console.log("checkbox is true")
+        url = "http://192.168.0.2/api/ZBmlmu00Kpy23xBCjtLQCCinBYJaqjeULVNEWAmB/lights/2/state"
     }
     else {
-        console.log("checkbox is false")
+        url = "http://192.168.0.2/api/ZBmlmu00Kpy23xBCjtLQCCinBYJaqjeULVNEWAmB/lights/1/state"
     }
 }
 
