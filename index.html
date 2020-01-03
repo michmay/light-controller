@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Living Room Light</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+<div class="row">
+
+
+    <div class="col-sm-1"></div>
+    <div class="col-sm-3">
+        <button id="lightOff" onclick="turnLightOff()">Off</button>
+    </div>
+
+    <div class="col-sm-3">
+
+        <button id="lightOn" onclick="turnLightOn()">On</button>
+    </div>
+
+    <div class="col-sm-3">
+        <button id="lightDim"  onclick="dimLight()">Dim</button>
+    </div>
+    
+</div>
+
+<div class="row">
+<div class="col-sm-1"></div>
+<div class="slidecontainer col-sm-10">
+    <input type="range" min="1" max="255" value="50" class="slider" id="myRange">
+</div>
+<div class="col-sm-1"></div>
+</div>
+
+
+</body>
+</html>
+<script src="./main.js"></script>
