@@ -84,7 +84,7 @@ function setBrightness(brightness) {
 var slider = document.getElementById("myRange");
 
 // Update the current slider value (each time you drag the slider handle)
-slider.oninput = function() {
+slider.onmouseup = function() {
     console.log(this.value);
     setBrightness(this.value);
 
