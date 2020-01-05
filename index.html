@@ -27,14 +27,19 @@
 <div class="row">
     <container class="container" style="justify-content:center; margin: 10px 30px;">
         
-        <svg class="col-sm-6" viewBox="0 0 800 500" style="background-color:#ffffff; margin: 10px 30px;">
+        <svg class="col-sm-6" viewBox="0 0 800 500" style="background-color:#505050; margin: 10px 30px;">
             <!-- <rect x="0" y="0" width="10" height="10" stroke="white"></rect>
             <circle cx="50" cy="50" r="50" style="fill:#a53939"></circle>
             <ellipse cx="10" cy="5" rx="10" ry="50"></ellipse>
             <polygon points="0,0 10,5 20,0 20,20 10,15 0,20"></polygon> -->
 
             <path id="floorplan" d="M 50 350 L 50 150 L 350 150 L 500 150 L 500 200 L 600 200 L 500 200 L 500 150 L 650 150 L 750 150 L 750 200 L 650 200 L 750 200 L 750 350 L 500 350 L 500 250 L 500 350 L 350 350 L 350 200 L 350 350 L 200 350 L 200 200 L 300 200 L 100 200 L 200 200 L 200 350 L 50 350 " 
-            stroke="orange" fill="grey" stroke-thickness="5px"></path>
+             fill="grey" stroke-thickness="5px"></path>
+            
+            <circle class="light-bkg" id="light-bkg-bedroom" cx="275" cy="275" r="25" style="fill:#b8b6b6"></circle>
+            <circle class="light-bkg" id="light-bkg-livingroom" cx="675" cy="275" r="25" style="fill:#b8b6b6"></circle>
+            <image class="light-icon" id="light-icon-bedroom" href="light.svg" x="250" y="250" width="50" height="50"  alt="Light icon"></image>
+            <image class="light-icon" id="light-icon-livingroom" href="light.svg" x="650" y="250" width="50" height="50"  alt="Light icon"></image>
             
             <!-- <polyline points="0,0 10,5 20,0 20,20 10,15 0,20" stroke="black"></polyline> -->
             <!-- <path d="M65,10 a50,25 0 1,0 50,25"></path> -->
