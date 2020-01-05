@@ -98,10 +98,6 @@ function setBrightness(brightness) {
         sendPut(url, payload);
         }
     );
-
-    var opacity = Math.max(Math.floor(brightness/255*100), 10)
-    console.log("opacity is " + opacity)
-    slider.setAttribute('style', 'opacity: ' + opacity + '%')
 }
 
 var slider = document.getElementById("myRange");
@@ -112,11 +108,16 @@ slider.onmouseup = function() {
     setBrightness(this.value);  
 }
 
+slider.oninput = function() {
+    var brightness = this.value;  
+    var opacity = Math.max(Math.floor(brightness/255*100), 10)
+    console.log("opacity is " + opacity)
+    slider.setAttribute('style', 'opacity: ' + opacity + '%')
+}
 
 
 bedroom_light = document.getElementById("light-icon-bedroom")
 console.log(bedroom_light)
-
 
 bedroom_light.onclick = () => {
     console.log("BR circle clicked!")
@@ -136,7 +137,6 @@ bedroom_light.onclick = () => {
 livingroom_light = document.getElementById("light-icon-livingroom")
 console.log(livingroom_light)
 
-
 livingroom_light.onclick = () => {
     console.log("LR circle clicked!")
     document.getElementById("room-switch").checked = false;
@@ -150,8 +150,3 @@ livingroom_light.onclick = () => {
     livingroom_light_bkgrnd = document.getElementById("light-bkg-livingroom")
     livingroom_light_bkgrnd.setAttribute('style', "fill: #2196F3")
 }
-
-
-
-
-setBrightness(50);
