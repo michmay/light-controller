@@ -96,10 +96,6 @@ function setBrightness(brightness) {
         sendPut(url, payload);
         }
     );
-
-    var opacity = Math.max(Math.floor(brightness/255*100), 10)
-    console.log("opacity is " + opacity)
-    slider.setAttribute('style', 'opacity: ' + opacity + '%')
 }
 
 var slider = document.getElementById("myRange");
@@ -108,6 +104,14 @@ var slider = document.getElementById("myRange");
 slider.onmouseup = function() {
     console.log(this.value);
     setBrightness(this.value);  
+}
+
+slider.oninput = function() {
+
+    var brightness = this.value;
+    var opacity = Math.max(Math.floor(brightness/255*100), 10)
+    console.log("opacity is " + opacity)
+    slider.setAttribute('style', 'opacity: ' + opacity + '%')
 }
 
 
