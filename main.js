@@ -10,9 +10,11 @@ function makeURL(light) {
     return url_prefix + light.toString() + url_postfix; 
 }
 
-document.onkeypress = (e) => {
-    if (e.code = "Space"){
-        document.getElementById("room-switch").toggle
+document.onkeydown = (e) => {
+    console.log(e.code);
+    if (e.code === "KeyB"){
+        var switcher = document.getElementById("room-switch").checked
+        switcher.checked = !switcher.checked;
     }
 } 
 
