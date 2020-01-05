@@ -3,7 +3,6 @@ body {
     overflow: hidden;
 }
 
-
 .row {
     align-items: center;
     margin-top: 10px;
@@ -13,8 +12,7 @@ div .btn {
     height: 40px;
     width: 180px;
     border-radius: 16px;
-    margin: 20px 20px 20px;
-    
+    margin: 5px 20px 20px;
 }
 
 #lightOff {

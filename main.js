@@ -137,6 +137,7 @@ bedroom_light.onclick = () => {
 livingroom_light = document.getElementById("light-icon-livingroom")
 console.log(livingroom_light)
 
+
 livingroom_light.onclick = () => {
     console.log("LR circle clicked!")
     document.getElementById("room-switch").checked = false;
