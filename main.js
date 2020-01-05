@@ -107,11 +107,51 @@ function setBrightness(brightness) {
 var slider = document.getElementById("myRange");
 
 // Update the current slider value (each time you drag the slider handle)
-slider.oninput = function() {
+slider.onmouseup = function() {
     console.log(this.value);
-    setBrightness(this.value);
-
-    
+    setBrightness(this.value);  
 }
+
+
+
+bedroom_light = document.getElementById("light-icon-bedroom")
+console.log(bedroom_light)
+
+
+bedroom_light.onclick = () => {
+    console.log("BR circle clicked!")
+    document.getElementById("room-switch").checked = true;
+    
+    // Switches the current selected light
+    setLights();
+
+    livingroom_light_bkgrnd = document.getElementById("light-bkg-livingroom")
+    livingroom_light_bkgrnd.setAttribute('style', "fill: #b8b6b6")
+
+    bedroom_light_bkgrnd = document.getElementById("light-bkg-bedroom")
+    bedroom_light_bkgrnd.setAttribute('style', "fill: #2196F3")
+}
+
+
+livingroom_light = document.getElementById("light-icon-livingroom")
+console.log(livingroom_light)
+
+
+livingroom_light.onclick = () => {
+    console.log("LR circle clicked!")
+    document.getElementById("room-switch").checked = false;
+    
+    // Switches the current selected light
+    setLights();
+
+    bedroom_light_bkgrnd = document.getElementById("light-bkg-bedroom")
+    bedroom_light_bkgrnd.setAttribute('style', "fill: #b8b6b6")
+
+    livingroom_light_bkgrnd = document.getElementById("light-bkg-livingroom")
+    livingroom_light_bkgrnd.setAttribute('style', "fill: #2196F3")
+}
+
+
+
 
 setBrightness(50);
