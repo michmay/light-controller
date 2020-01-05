@@ -153,3 +153,10 @@ input:checked + .slider-room:before {
   
   justify-content: center;
 }
+
+
+#floorplan {
+  fill: transparent;
+  stroke-width: 5px;
+  
+}
