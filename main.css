@@ -158,7 +158,9 @@ input:checked + .slider-room:before {
 #floorplan {
   fill: transparent;
   stroke: #ffffff;
-  stroke-width: 5px;
-  
-  
+  stroke-width: 5px; 
+}
+
+#ffffff { 
+  color: #2196F3
 }
