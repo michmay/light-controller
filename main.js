@@ -134,6 +134,7 @@ bedroom_light.onclick = () => {
 }
 
 
+
 livingroom_light = document.getElementById("light-icon-livingroom")
 console.log(livingroom_light)
 
@@ -151,3 +152,18 @@ livingroom_light.onclick = () => {
     livingroom_light_bkgrnd = document.getElementById("light-bkg-livingroom")
     livingroom_light_bkgrnd.setAttribute('style', "fill: #2196F3")
 }
+
+
+
+function fullScreen() {
+    var elem = document.documentElement;
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) { /* Firefox */
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE/Edge */
+      elem.msRequestFullscreen();
+    }
+  }
