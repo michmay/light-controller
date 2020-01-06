@@ -109,20 +109,12 @@ slider.onmouseup = function() {
 }
 
 slider.oninput = function() {
-<<<<<<< HEAD
 
     var brightness = this.value;
-=======
-    var brightness = this.value;  
->>>>>>> d1a4100e041b0cb3eb0300a7bd3a4cc3d145dab6
     var opacity = Math.max(Math.floor(brightness/255*100), 10)
     console.log("opacity is " + opacity)
     slider.setAttribute('style', 'opacity: ' + opacity + '%')
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> d1a4100e041b0cb3eb0300a7bd3a4cc3d145dab6
 
 
 bedroom_light = document.getElementById("light-icon-bedroom")

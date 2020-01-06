@@ -3,16 +3,18 @@ body {
     overflow: hidden;
 }
 
+
 .row {
     align-items: center;
     margin-top: 10px;
 
 }
-div .btn {
-    height: 40px;
+button {
+    height: 240px;
     width: 180px;
     border-radius: 16px;
-    margin: 5px 20px 20px;
+    margin: 100px 20px 50px;
+    
 }
 
 #lightOff {
@@ -152,11 +154,18 @@ input:checked + .slider-room:before {
   justify-content: center;
 }
 
+svg .floorplan-container {
+  background: none;
+}
+
+.light-bkg {
+  fill: #b8b6b6
+}
 
 #floorplan {
   fill: transparent;
-  stroke: #b9b9b9;
-  stroke-width: 5px; 
+  stroke: #ffffff;
+  stroke-width: 2px; 
 }
 
 #ffffff { 
