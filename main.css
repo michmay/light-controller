@@ -3,18 +3,16 @@ body {
     overflow: hidden;
 }
 
-
 .row {
     align-items: center;
     margin-top: 10px;
 
 }
-button {
-    height: 240px;
+div .btn {
+    height: 40px;
     width: 180px;
     border-radius: 16px;
-    margin: 100px 20px 50px;
-    
+    margin: 5px 20px 20px;
 }
 
 #lightOff {
@@ -157,7 +155,7 @@ input:checked + .slider-room:before {
 
 #floorplan {
   fill: transparent;
-  stroke: #ffffff;
+  stroke: #b9b9b9;
   stroke-width: 5px; 
 }
 

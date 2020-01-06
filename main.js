@@ -10,9 +10,11 @@ function makeURL(light) {
     return url_prefix + light.toString() + url_postfix; 
 }
 
-document.onkeypress = (e) => {
-    if (e.code = "Space"){
-        document.getElementById("room-switch").toggle
+document.onkeydown = (e) => {
+    console.log(e.code);
+    if (e.code === "KeyB"){
+        var switcher = document.getElementById("room-switch").checked
+        switcher.checked = !switcher.checked;
     }
 } 
 
@@ -107,18 +109,24 @@ slider.onmouseup = function() {
 }
 
 slider.oninput = function() {
+<<<<<<< HEAD
 
     var brightness = this.value;
+=======
+    var brightness = this.value;  
+>>>>>>> d1a4100e041b0cb3eb0300a7bd3a4cc3d145dab6
     var opacity = Math.max(Math.floor(brightness/255*100), 10)
     console.log("opacity is " + opacity)
     slider.setAttribute('style', 'opacity: ' + opacity + '%')
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> d1a4100e041b0cb3eb0300a7bd3a4cc3d145dab6
 
 
 bedroom_light = document.getElementById("light-icon-bedroom")
 console.log(bedroom_light)
-
 
 bedroom_light.onclick = () => {
     console.log("BR circle clicked!")
@@ -133,6 +141,7 @@ bedroom_light.onclick = () => {
     bedroom_light_bkgrnd = document.getElementById("light-bkg-bedroom")
     bedroom_light_bkgrnd.setAttribute('style', "fill: #2196F3")
 }
+
 
 
 livingroom_light = document.getElementById("light-icon-livingroom")
@@ -155,5 +164,15 @@ livingroom_light.onclick = () => {
 
 
 
-
-setBrightness(50);
+function fullScreen() {
+    var elem = document.documentElement;
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) { /* Firefox */
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE/Edge */
+      elem.msRequestFullscreen();
+    }
+  }

@@ -14,20 +14,20 @@
 <div class="row">
     <div class="col-sm-2">
         <!-- Rounded switch -->
-        <label class="switch">
+        <label class="switch hidden">
             <input type="checkbox" id="room-switch" onclick="setLights()">
             <span class="slider-room round"></span>
         </label>
         
     </div>
-    <span class="col-sm-5"></span>
-    <span class="col-sm-2" id="room-name">LIVING</span>
+    <span class="col-sm-1"></span>
+    <span class="col-sm-2" id="room-name" style="margin-top: 10px" onclick="fullScreen()">LIVING</span>
 </div>
 
 <div class="row">
     <container class="container" style="justify-content:center; margin: 10px 30px;">
         
-        <svg class="col-sm-8" viewBox="0 100 800 300" style="background-color:#505050; margin: 10px 30px;">
+        <svg class="col-sm-8" viewBox="30 140 750 220" style="margin: 10px 30px">
             <!-- <rect x="0" y="0" width="10" height="10" stroke="white"></rect>
             <circle cx="50" cy="50" r="50" style="fill:#a53939"></circle>
             <ellipse cx="10" cy="5" rx="10" ry="50"></ellipse>
@@ -53,20 +53,21 @@
 
 <div class="row">
 
-
     <div class="col-sm-1"></div>
-    <div class="col-sm-3">
-        <button id="lightOff" onclick="turnLightOff()">Off</button>
+
+    <div class="col-sm-3 btn" id="lightOff" onclick="turnLightOff()">
+        Off
     </div>
 
-    <div class="col-sm-3">
-
-        <button id="lightOn" onclick="turnLightOn()">On</button>
+    <div class="col-sm-3 btn" id="lightDim"  onclick="dimLight()">
+        Dim
     </div>
 
-    <div class="col-sm-3">
-        <button id="lightDim"  onclick="dimLight()">Dim</button>
+    <div class="col-sm-3 btn"  id="lightOn" onclick="turnLightOn()">
+        On
     </div>
+
+    
     
 </div>
 
