@@ -4,26 +4,70 @@
   <title>Living Room Light</title>
   <meta charset="utf-8"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap" rel="stylesheet">
+  <script src="https://d3js.org/d3.v4.js"></script>
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
 <body>
+
+<div class="row">
+    <div class="col-sm-2">
+        <!-- Rounded switch -->
+        <label class="switch hidden">
+            <input type="checkbox" id="room-switch" onclick="setLights()">
+            <span class="slider-room round"></span>
+        </label>
+        
+    </div>
+    <span class="col-sm-1"></span>
+    <span class="col-sm-2" id="room-name" style="margin-top: 10px" onclick="fullScreen()">LIVING</span>
+</div>
+
+<div class="row">
+    <container class="container" style="justify-content:center; margin: 10px 30px;">
+        
+        <svg class="col-sm-8" viewBox="30 140 750 220" style="margin: 10px 30px">
+            <!-- <rect x="0" y="0" width="10" height="10" stroke="white"></rect>
+            <circle cx="50" cy="50" r="50" style="fill:#a53939"></circle>
+            <ellipse cx="10" cy="5" rx="10" ry="50"></ellipse>
+            <polygon points="0,0 10,5 20,0 20,20 10,15 0,20"></polygon> -->
+
+            <path id="floorplan" d="M 50 350 L 50 150 L 350 150 L 500 150 L 500 200 L 600 200 L 500 200 L 500 150 L 650 150 L 750 150 L 750 200 L 650 200 L 750 200 L 750 350 L 500 350 L 500 250 L 500 350 L 350 350 L 350 200 L 350 350 L 200 350 L 200 200 L 300 200 L 100 200 L 200 200 L 200 350 L 50 350 " 
+             fill="grey" stroke-thickness="5px"></path>
+            
+            <circle class="light-bkg" id="light-bkg-bedroom" cx="275" cy="275" r="25" style="fill:#b8b6b6"></circle>
+            <circle class="light-bkg" id="light-bkg-livingroom" cx="675" cy="275" r="25" style="fill:#b8b6b6"></circle>
+            <image class="light-icon" id="light-icon-bedroom" href="light.svg" x="250" y="250" width="50" height="50"  alt="Light icon"></image>
+            <image class="light-icon" id="light-icon-livingroom" href="light.svg" x="650" y="250" width="50" height="50"  alt="Light icon"></image>
+            
+            <!-- <polyline points="0,0 10,5 20,0 20,20 10,15 0,20" stroke="black"></polyline> -->
+            <!-- <path d="M65,10 a50,25 0 1,0 50,25"></path> -->
+
+        </svg>
+
+
+    </container>
+</div>
+
+
 <div class="row">
 
-
     <div class="col-sm-1"></div>
-    <div class="col-sm-3">
-        <button id="lightOff" onclick="turnLightOff()">Off</button>
+
+    <div class="col-sm-3 btn" id="lightOff" onclick="turnLightOff()">
+        Off
     </div>
 
-    <div class="col-sm-3">
-
-        <button id="lightOn" onclick="turnLightOn()">On</button>
+    <div class="col-sm-3 btn" id="lightDim"  onclick="dimLight()">
+        Dim
     </div>
 
-    <div class="col-sm-3">
-        <button id="lightDim"  onclick="dimLight()">Dim</button>
+    <div class="col-sm-3 btn"  id="lightOn" onclick="turnLightOn()">
+        On
     </div>
+
+    
     
 </div>
 

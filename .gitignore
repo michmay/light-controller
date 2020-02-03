@@ -1,1 +1,4 @@
 node_modules
+#wkhtmltoimage.exe
+wkhtmltopdf.exe
+#wkhtmltox.dll
