@@ -1,0 +1,22 @@
+name: Publish lights via FTP     
+        
+on:
+  push:
+    branches: 
+      - master
+jobs:
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@2.0.0
+      env:
+        FTP_SERVER: ftp.michaelmayg.me
+        FTP_USERNAME: ${{ secrets.FTP_USER }}
+        FTP_PASSWORD: ${{ secrets.FTP_PW }}
+        ARGS: --delete --transfer-all
+        METHOD: ftp
+        PORT: 21
+        # --delete arg will delete files on the server if you've deleted them in git
