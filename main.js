@@ -1,6 +1,6 @@
 const roomName = document.getElementById("room-name");
 
-var url_prefix = "http://192.168.0.2/api/ZBmlmu00Kpy23xBCjtLQCCinBYJaqjeULVNEWAmB/lights/"
+var url_prefix = "https://192.168.0.2/api/ZBmlmu00Kpy23xBCjtLQCCinBYJaqjeULVNEWAmB/lights/"
 var url_postfix = "/state"
 
 var lights = [1];
